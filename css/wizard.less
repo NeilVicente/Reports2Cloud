@@ -1,0 +1,168 @@
+
+@wiz-height: 50px;
+.wizard-steps {
+    margin: 0px 25px;
+    padding:0px;
+    position: relative;
+    clear:both;
+    font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+
+    div {
+        position:relative;
+
+        &:last-child a {
+            margin-right: 0px;
+        }
+    }
+
+    /*STEP NUMBERS*/
+    span {
+        display: block;
+        float: left;
+        font-size: 14px;
+        text-align:center;
+        width: @wiz-height/2;
+        margin: 10px 15px 10px 10px;
+        line-height: @wiz-height/2;
+        background: #FFF;
+        -webkit-border-radius:15px;
+        -moz-border-radius:15px;
+        border-radius:15px;
+        border: 2px solid #666;
+        color: #163038;
+        text-shadow:none;
+    }
+
+    /*DEFAULT STEPS*/
+    a {
+        position:relative;
+        display:block;
+        width: 159px;
+        height:@wiz-height;
+        margin-right: @wiz-height + 14;
+        padding:0px 10px 0px 3px;
+        float: left;
+        font-size: 12px;
+        line-height:@wiz-height;
+        color: #fff;
+        background: #5FB3FF;
+        text-decoration:none;
+        text-shadow:1px 1px 1px rgba(0,0,0, 0.8);
+
+        &:before {
+            width:0px;
+            height:0px;
+            border-top: @wiz-height/2 solid #5FB3FF;
+            border-bottom: @wiz-height/2 solid #5FB3FF;
+            border-left: @wiz-height/2 solid transparent;
+            position: absolute;
+            content: "";
+            top: 0px;
+            left: -@wiz-height/2;
+        }
+
+        &:after {
+            width: 0;
+            height: 0;
+            border-top: @wiz-height/2 solid transparent;
+            border-bottom: @wiz-height/2 solid transparent;
+            border-left: @wiz-height/2 solid #5FB3FF;
+            position: absolute;
+            content: "";
+            top: 0px;
+            right: -@wiz-height/2;
+        }
+    }
+
+    /*COMPLETED STEPS*/
+    .completed-step {
+        a {
+            color:#fff;
+            background: #69B47D;
+            text-shadow:1px 1px 1px rgba(0,0,0, 0.8);
+
+            &:before {
+                border-top: @wiz-height/2 solid #69B47D;
+                border-bottom: @wiz-height/2 solid #69B47D;
+            }
+
+            &:after {
+                border-left: @wiz-height/2 solid #69B47D;
+            }
+        }
+
+        span {
+            border: 2px solid #666;
+            color: #163038;
+            text-shadow:none;
+        }
+
+        &:hover {
+            a {
+                color:#fff;
+                background: #519C65;
+                text-shadow:1px 1px 1px rgba(0,0,0, 0.8);
+
+                &:before {
+                    border-top: @wiz-height/2 solid #519C65;
+                    border-bottom: @wiz-height/2 solid #519C65;
+                }
+
+                &:after {
+                    border-left: @wiz-height/2 solid #519C65;
+                }
+            }
+
+            span {
+                color:#163038;
+            }
+        }
+    }
+
+
+    /*ACTIVE STEPS*/
+    .active-step {
+        a {
+            color:#fff;
+            background: #0078e7;
+            text-shadow:1px 1px 1px rgba(0,0,0, 0.8);
+
+            &:before {
+                border-top: @wiz-height/2 solid #0078e7;
+                border-bottom: @wiz-height/2 solid #0078e7;
+            }
+
+            &:after {
+                border-left: @wiz-height/2 solid #0078e7;
+            }
+        }
+
+        span {
+            color: #163038;
+            text-shadow:none;
+            border: 2px solid #424242;
+        }
+
+        &:hover {
+            a {
+                color:#fff;
+                background: #016BCC;
+                text-shadow:1px 1px 1px rgba(0,0,0, 0.8);
+
+                &:before {
+                    border-top: @wiz-height/2 solid #016BCC;
+                    border-bottom: @wiz-height/2 solid #016BCC;
+                }
+
+                &:after {
+                    border-left: @wiz-height/2 solid #016BCC;
+                }
+            }
+
+            span {
+                color: #163038;
+            }
+        }
+    }
+}

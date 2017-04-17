@@ -1,0 +1,52 @@
+<div class="all-data">
+    <div class="all-data-row">
+        <div class="all-data-row-left">
+            <label class="list-name">Form</label>
+        </div>
+        <div class="all-data-row-right">
+            <span class="list-value"><a href="<%=form_data.url%>" target="_blank"><%=form_data.title%></a></span>
+        </div>              
+    </div>
+    <div class="all-data-row">
+        <div class="all-data-row-left">
+            <label class="list-name">Report</label>
+        </div>
+        <div class="all-data-row-right">
+            <span class="list-value"><a href="<%=report_data.url%>" target="_blank"><%=report_data.title%></a></span>
+        </div>              
+    </div>
+    <div class="all-data-row">
+        <div class="all-data-row-left">
+            <label class="list-name">JotForm Account</label>
+        </div>
+        <div class="all-data-row-right">
+            <span class="list-value"><a href="http://www.jotform.com/myaccount" target="_blank"><%=user_data.username%> ( <%=user_data.email%> )</a></span>
+        </div>              
+    </div>
+    <div class="all-data-row">
+        <div class="all-data-row-left">
+            <label class="list-name">Dropbox Account</label>
+        </div>
+        <div class="all-data-row-right">
+            <span class="list-value"><a href="<%=user_data.dropbox_data.user.account_url%>" target="_blank"><%=user_data.dropbox_data.user.display_name%></a></span>
+        </div>              
+    </div>
+    <div class="all-data-row">
+        <div class="all-data-row-left">
+            <label class="list-name">Send to path</label>
+        </div>
+        <div class="all-data-row-right">
+            <span class="list-value"><span class="pure-text pure-blue">Dropbox<%=report_data.filepath%></span></span>
+        </div>              
+    </div>
+    <% if ( report_data.filename ) { %>
+    <div class="all-data-row">
+        <div class="all-data-row-left">
+            <label class="list-name">Filename</label>
+        </div>
+        <div class="all-data-row-right">
+            <span class="list-value"><span class="pure-text pure-blue"><%=report_data.filename%></span></span>
+        </div>              
+    </div>
+    <% } %>
+</div>

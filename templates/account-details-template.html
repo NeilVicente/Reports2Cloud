@@ -1,0 +1,16 @@
+<% if ( user_data ) { %>
+<div class="account-details-container">
+    <div class="right">
+        <a class="account_link" href="http://www.jotform.com/myaccount/">
+            <div class="account_image" style="background: url('<%=user_data.avatarUrl%>') no-repeat;"></div>
+        </a>
+    </div>
+    <div class="right account-info">
+        <span class="account_username"><a class="account_link" href="http://www.jotform.com/myaccount/"><%=user_data.username%></a></span>
+        <span class="account_email>"><%=user_data.email%></span>
+    </div>
+    <div class="clearer"></div>
+    <div class="account_logout"><a href="#logout" id="logout">LOGOUT</a></div>
+</div>
+<div class="clearer"></div>
+<% } %>

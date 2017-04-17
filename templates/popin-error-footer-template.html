@@ -1,0 +1,13 @@
+<div class="modal-err-footer">
+    <div class="superCentered">
+        <% 
+            if ( buttons && buttons.length > 0 ) {
+                _.each(buttons, function(value, key){
+        %>
+        <button class="<%=value.class%>" id="<%=String(value.id).substr(1)%>"><%=value.text%></button>
+        <%
+                });
+            }
+        %>
+    </div>
+</div>

@@ -1,0 +1,83 @@
+.oh{overflow:hidden;}
+.dn{display:none;}
+.iv{visibility: hidden;}
+.vs{visibility: visible;}
+.dib{display:inline-block;}
+.db{display:block;}
+.cp{cursor:pointer;}
+.centeredDiv{margin-right:auto;margin-left:auto;}
+.superCentered{display:table-cell;width:inherit;height:inherit;text-align:center;vertical-align:middle; }
+.left{float:left;}
+.right{float:right;}
+.bold{font-weight:bold;}
+ol,ul{list-style:none;margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+.border-box{-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.clearer{clear:both;}
+.clearfix:before,.clearfix:after{content:"";display:table;}
+.clearfix:after{clear:both;}
+.unselectable{-moz-user-select:-moz-none;-khtml-user-select:none;-webkit-user-select:none;-o-user-select:none;user-select:none;}
+.text-truncate{overflow:hidden;text-overflow:ellipsis;white-space:nowrap; }
+
+.box-shadow-rgba(@hl, @vl, @b, @s, @c1, @c2, @c3, @op) {
+    -webkit-box-shadow: @hl @vl @b @s rgba(@c1, @c2, @c3, @op); 
+            box-shadow: @hl @vl @b @s rgba(@c1, @c2, @c3, @op);
+       -moz-box-shadow: @hl @vl @b @s rgba(@c1, @c2, @c3, @op);
+}
+.varela { font-family: 'Varela Round', sans-serif; }
+.square(@size) {.size(@size, @size);}
+.size(@width, @height) {width: @width; height: @height;}
+
+.spinner(@deg, @spd, @rot){
+    -webkit-transform: rotate(@deg) translate3d( 0, 0, 0);
+    -moz-transform: rotate(@deg);
+    -o-transform: rotate(@deg);
+    -ms-transform: rotate(@deg);
+    transform: rotate(@deg);
+    -o-transition:@spd;
+    -ms-transition:@spd;
+    -moz-transition:@spd;
+    -webkit-transition:@spd;
+    transition:@spd;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@rot);
+}
+
+.transition(@a, @b, @c){
+    -webkit-transition: @a @b @c;
+    -moz-transition: @a @b @c;
+    -ms-transition: @a @b @c;
+    -o-transition: @a @b @c;
+}
+
+.spinInfinite{
+	-webkit-animation: spin 0.7s infinite linear;
+	-moz-animation: spin 0.7s infinite linear;
+	-o-animation: spin 0.7s infinite linear;
+	-ms-animation: spin 0.7s infinite linear;
+}
+
+@-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}
+@-moz-keyframes spin {
+    0% { -moz-transform: rotate(0deg);}
+    100% { -moz-transform: rotate(360deg);}
+}
+@-o-keyframes spin {
+    0% { -o-transform: rotate(0deg);}
+    100% { -o-transform: rotate(360deg);}
+}
+@-ms-keyframes spin {
+    0% { -ms-transform: rotate(0deg);}
+    100% { -ms-transform: rotate(360deg);}
+}
+
+
+
+.spinSmall {
+    .spinner(0deg, .1s, 0);
+}
+
+.spinSmallDefault {
+    .spinner(45deg, .1s, 2);
+}

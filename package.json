@@ -1,0 +1,11 @@
+{
+  "name": "reports2cloud",
+  "version": "0.0.1",
+  "description": "Reports To Cloud App",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-uglify" : "latest",
+    "grunt-contrib-less" : "latest",
+    "grunt-contrib-cssmin" : "latest"
+  }
+}

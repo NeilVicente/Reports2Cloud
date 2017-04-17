@@ -1,0 +1,26 @@
+<div class="report-container">
+    <h2>Reports List</h2>
+    <div class="reports-list-cont" style="position:relative;">
+    <ul>
+    <%
+        if (user_reports && user_reports.length > 0) {
+            _.each(user_reports, function(value,key){
+                var fixed_title = value.filename || value.jotform_title;
+                if (fixed_title.length>30) {
+                    fixed_title = fixed_title.substr(0, 27) + '...';
+                }
+    %>
+        <li data-id="<%=value.id%>">
+            <a class="link-list" href="<%=value.jotform_url%>" data-type="<%=value.jotform_type%>" target="_blank" title="Preview <%=value.jotform_title%>"><%=fixed_title%></a>
+            <div class="sidebar-actions-icons edit-list" title="Edit" data-rid="<%=value.jotform_rid+'_'+value.id%>"></div>
+            <div class="sidebar-actions-icons remove-list" title="Remove" data-rid="<%=value.jotform_rid+'_'+value.id%>"></div>
+        </li>
+    <%
+            });
+        } else {
+    %>
+        <p class="right">No reports found, please create!</p>
+    <%  } %>
+    </ul>
+    </div>
+</div>

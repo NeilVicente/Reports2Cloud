@@ -1,0 +1,15 @@
+<ul class="jFileTree dn">
+<%
+    if ( folders && folders.length > 0 ) {
+        _.each(folders, function(value, key){
+%>
+    <li class="row-tree">
+        <div class="tree-icons directory collapsed"></div>
+        <a href="#" rel="<%=value.path%>"><%=value.name%></a>
+        <span class="dn errors"></span>
+    </li>
+<%
+        });
+    }
+%>
+</ul>

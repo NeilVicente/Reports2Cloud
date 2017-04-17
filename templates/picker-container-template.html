@@ -1,0 +1,103 @@
+<div class="slides iv">
+
+    <!-- connect to dropbox slide -->
+    <section class="picker-slides" data-transition="concave" id="connect-dropbox">
+        <h2>Connect To Dropbox</h2>
+        <p class="small-hints">Authenticate your Dropbox account with the application</p>
+        <button data-pickertype="dropbox" class="ladda-button pure-button pure-blue picker-btn" data-style="expand-right">Connect</button>
+    </section>
+
+    <!-- select form slide -->
+    <section class="picker-slides" data-transition="fast" id="select-form">
+        <h2>Pick your Form</h2>
+        <p class="small-hints">Where the reports will be coming from</p>
+        <button data-pickertype="form" class="ladda-button pure-button pure-green picker-btn" data-style="expand-right">Forms</button>
+        <div class="back-nav">
+            <a class="back-btn" href="#dropbox"><i class="icon-chevron-sign-left"></i> <span class="navigator-name" data-target="connect-dropbox">Re-connect with Dropbox<span></a>
+        </div>
+    </section>
+
+    <!-- select report slide -->
+    <section class="picker-slides" data-transition="fast" id="select-report">
+        <h2>Pick your Report</h2>
+        <p class="small-hints">Selected report will be sent to your Dropbox</p>
+        <button data-pickertype="report" class="ladda-button pure-button pure-orange picker-btn" data-style="expand-right">Reports</button>
+        <div class="back-nav">
+            <a class="back-btn" href="#form"><i class="icon-chevron-sign-left"></i> <span class="navigator-name" data-target="select-form">Repick Form</span></a>
+        </div>
+    </section>
+
+    <section class="picker-slides" data-transition="fast" id="set-password">
+        <h2>Password</h2>
+        <p class="small-hints">We discovered that your report is password protected</p>
+        <div class="report-input-container">
+            <div class="report-file-modification">
+                <input type="password" id="report_password" name="report_password" placeholder="Your reports password"/>
+            </div>
+        </div>
+        <div class="clearer"></div>
+        <button data-pickertype="confirmpassword" class="ladda-button pure-button pure-blue picker-btn" data-style="expand-right">Confirm</button>
+        <div class="back-nav">
+            <a class="back-btn" href="#report"><i class="icon-chevron-sign-left"></i> <span class="navigator-name" data-target="select-report">Repick Report</span></a>
+        </div>
+    </section>
+
+    <!-- select upload folder slide -->
+    <section class="picker-slides" data-transition="concave" id="select-upload-folder">
+        <h2>Dropbox Folder</h2>
+        <p class="small-hints">Select on where to send the report</p>
+        <div class="report-input-container">
+            <div class="dropbox-folders-hint">
+                - Single click to select folder<br>
+                - Double click to open folder
+            </div>
+            <div class="reloadButton">
+                <button class="pure-button pure-blue pure-button-small" id="reloadFolders">
+                    <i class="icon-refresh"></i> Refresh
+                </button>
+            </div>
+            <div class="report-input-inner">
+                <div class="loading-center"><h2 id="loading">Loading<span>.</span><span>.</span><span>.</span></h2></div>
+                <div id="dropbox-folders"></div>
+            </div>
+            <div class="report-file-modification">
+                <div style="padding-top: 10px;">
+                    <div class="dropbox-folders-hint">- Filename modification</div>
+                    <div class="dropbox-folders-hint">
+                        <input type="text" id="filename" name="filename" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearer"></div>
+        <button data-pickertype="folderpath" class="ladda-button pure-button pure-green picker-btn" data-style="expand-right">Pick</button>
+        <div class="back-nav">
+            <a class="back-btn" href="#report"><i class="icon-chevron-sign-left"></i> <span class="navigator-name" data-target="select-report">Repick Report</span></a>
+        </div>
+    </section>
+
+    <!-- confirm everthing slide -->
+    <section class="picker-slides" data-transition="concave" id="confirm-all">
+        <h2>Confirmation</h2>
+        <p class="small-hints">Finalize everything, proceed when okay</p>
+        <div id="finalize-data"></div>
+        <div class="clearer"></div>
+        <button data-pickertype="confirm" class="ladda-button pure-button pure-green picker-btn" data-style="expand-right">Confirm</button>
+        <div class="back-nav">
+            <a class="back-btn" href="#path"><i class="icon-chevron-sign-left"></i> <span class="navigator-name" data-target="select-upload-folder">Repick Path</span></a>
+        </div>
+    </section>
+
+    <!-- success message slide -->
+    <section class="picker-slides" data-transition="linear" id="success-integration">
+        <h2 class="pure-text pure-green">Success</h2>
+        <div class="box-small-hints">
+            <p class="small-hints">
+                Report successfully added to list <br/>and it will be sent to your Dropbox account.
+                <span id="reportSuccessLabel"></span>
+            </p>
+        </div>
+        <div class="clearer"></div>
+        <button data-pickertype="back-main" class="pure-button pure-blue picker-btn">Back to Main</button>
+    </section>
+</div>

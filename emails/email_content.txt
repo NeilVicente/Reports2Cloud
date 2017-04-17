@@ -1,0 +1,9 @@
+Hello,<br>
+<br>
+I wanted to let you know that we updated the Reports2Cloud Application. You can visit the application website here:
+<a href="http://reports2cloud.jotform.io/" target="_blank" style="text-decoration: none;color: #2093FD;">http://reports2cloud.jotform.io/</a>
+<br>
+<br>
+With the new update, you can now select a password protected report and set the password on the fly. If you encountered errors regarding protected reports. This update will now solved that problem.<br>
+<br>
+I'm available to you anytime if you have questions or want to share your thoughts. Just email me at kenneth@jotform.com<br>

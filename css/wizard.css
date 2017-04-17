@@ -1,0 +1,139 @@
+.wizard-steps {
+  margin: 0px 25px;
+  padding: 0px;
+  position: relative;
+  clear: both;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  /*STEP NUMBERS*/
+
+  /*DEFAULT STEPS*/
+
+  /*COMPLETED STEPS*/
+
+  /*ACTIVE STEPS*/
+
+}
+.wizard-steps div {
+  position: relative;
+}
+.wizard-steps div:last-child a {
+  margin-right: 0px;
+}
+.wizard-steps span {
+  display: block;
+  float: left;
+  font-size: 14px;
+  text-align: center;
+  width: 25px;
+  margin: 10px 15px 10px 10px;
+  line-height: 25px;
+  background: #FFF;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  border: 2px solid #666;
+  color: #163038;
+  text-shadow: none;
+}
+.wizard-steps a {
+  position: relative;
+  display: block;
+  width: 159px;
+  height: 50px;
+  margin-right: 64px;
+  padding: 0px 10px 0px 3px;
+  float: left;
+  font-size: 12px;
+  line-height: 50px;
+  color: #fff;
+  background: #5FB3FF;
+  text-decoration: none;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.wizard-steps a:before {
+  width: 0px;
+  height: 0px;
+  border-top: 25px solid #5fb3ff;
+  border-bottom: 25px solid #5fb3ff;
+  border-left: 25px solid transparent;
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: -25px;
+}
+.wizard-steps a:after {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-bottom: 25px solid transparent;
+  border-left: 25px solid #5fb3ff;
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: -25px;
+}
+.wizard-steps .completed-step a {
+  color: #fff;
+  background: #69B47D;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.wizard-steps .completed-step a:before {
+  border-top: 25px solid #69b47d;
+  border-bottom: 25px solid #69b47d;
+}
+.wizard-steps .completed-step a:after {
+  border-left: 25px solid #69b47d;
+}
+.wizard-steps .completed-step span {
+  border: 2px solid #666;
+  color: #163038;
+  text-shadow: none;
+}
+.wizard-steps .completed-step:hover a {
+  color: #fff;
+  background: #519C65;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.wizard-steps .completed-step:hover a:before {
+  border-top: 25px solid #519c65;
+  border-bottom: 25px solid #519c65;
+}
+.wizard-steps .completed-step:hover a:after {
+  border-left: 25px solid #519c65;
+}
+.wizard-steps .completed-step:hover span {
+  color: #163038;
+}
+.wizard-steps .active-step a {
+  color: #fff;
+  background: #0078e7;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.wizard-steps .active-step a:before {
+  border-top: 25px solid #0078e7;
+  border-bottom: 25px solid #0078e7;
+}
+.wizard-steps .active-step a:after {
+  border-left: 25px solid #0078e7;
+}
+.wizard-steps .active-step span {
+  color: #163038;
+  text-shadow: none;
+  border: 2px solid #424242;
+}
+.wizard-steps .active-step:hover a {
+  color: #fff;
+  background: #016BCC;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+.wizard-steps .active-step:hover a:before {
+  border-top: 25px solid #016bcc;
+  border-bottom: 25px solid #016bcc;
+}
+.wizard-steps .active-step:hover a:after {
+  border-left: 25px solid #016bcc;
+}
+.wizard-steps .active-step:hover span {
+  color: #163038;
+}
